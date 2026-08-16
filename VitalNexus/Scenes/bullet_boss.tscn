@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://rfvm855mawmb"]
+
+[ext_resource type="Script" uid="uid://btur6ac6xf2gw" path="res://Scenes/BossBullet.cs" id="1_pt8nk"]
+[ext_resource type="Texture2D" uid="uid://b278p2kp06md4" path="res://Assets/Obstaculo.png" id="2_rblk3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gj6yf"]
+radius = 1398.6074
+
+[node name="BulletBoss" type="Area2D" unique_id=1992140607]
+script = ExtResource("1_pt8nk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1963549250]
+position = Vector2(27, 27.000244)
+scale = Vector2(0.024, 0.024)
+texture = ExtResource("2_rblk3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=188833695]
+position = Vector2(-37.0166, 20.01892)
+shape = SubResource("CircleShape2D_gj6yf")

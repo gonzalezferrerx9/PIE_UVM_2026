@@ -22,19 +22,41 @@ public partial class Projectile : Area2D
 	{
 		GlobalPosition += Direction * Speed * (float)delta;
 
+		// 1. Detectar bacterias (Area2D)
 		Godot.Collections.Array<Area2D> areas = GetOverlappingAreas();
-
 		foreach (Area2D area in areas)
 		{
-			if (area is Enemy enemy)
+			if (TryDamageTarget(area))
 			{
-				enemy.TakeDamage(Damage);
-
 				QueueFree();
-
 				return;
 			}
 		}
+
+		// 2. Detectar al Boss (StaticBody2D / Node2D)
+		Godot.Collections.Array<Node2D> bodies = GetOverlappingBodies();
+		foreach (Node2D body in bodies)
+		{
+			if (TryDamageTarget(body))
+			{
+				QueueFree();
+				return;
+			}
+		}
+	}
+
+	private bool TryDamageTarget(Node2D target)
+	{
+		// Si el objetivo está en el grupo "enemies" y tiene el método TakeDamage
+		if (target.IsInGroup("enemies"))
+		{
+			if (target.HasMethod("TakeDamage"))
+			{
+				target.Call("TakeDamage", Damage);
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public override void _Draw()

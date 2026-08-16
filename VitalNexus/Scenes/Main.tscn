@@ -16,7 +16,7 @@ position = Vector2(203.175, 317.715)
 scale = Vector2(1.44, 1.44)
 texture = ExtResource("2_pbw6q")
 
-[node name="Player" parent="." unique_id=1709415378 instance=ExtResource("2_idj7w")]
+[node name="Player" parent="." unique_id=1709415378 groups=["player"] instance=ExtResource("2_idj7w")]
 position = Vector2(147, 458)
 ProjectileScene = ExtResource("3_kln2b")
 
