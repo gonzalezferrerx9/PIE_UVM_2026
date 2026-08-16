@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://upur8f25ip5f"]
+
+[ext_resource type="Script" uid="uid://b10mwv3uytcqw" path="res://Scenes/Main.cs" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://diol1rjb5nw87" path="res://Scenes/Player.tscn" id="2_idj7w"]
+[ext_resource type="Texture2D" uid="uid://s8u4oa15kcvc" path="res://Assets/Fondo.png" id="2_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://bxwu78o58eh08" path="res://Scenes/Projectile.tscn" id="3_kln2b"]
+[ext_resource type="PackedScene" uid="uid://sbp5bwvf5xko" path="res://Scenes/Enemy.tscn" id="4_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://c02y82m7r87ht" path="res://Scenes/Obstacle.tscn" id="6_v1gob"]
+
+[node name="Main" type="Node2D" unique_id=2052934751]
+script = ExtResource("1_r150o")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1168703550]
+z_index = -10
+position = Vector2(203.175, 317.715)
+scale = Vector2(1.44, 1.44)
+texture = ExtResource("2_pbw6q")
+
+[node name="Player" parent="." unique_id=1709415378 instance=ExtResource("2_idj7w")]
+position = Vector2(147, 458)
+ProjectileScene = ExtResource("3_kln2b")
+
+[node name="Enemy" parent="." unique_id=618568443 instance=ExtResource("4_rgh2o")]
+position = Vector2(466, 118)
+
+[node name="Enemy2" parent="." unique_id=1867275466 instance=ExtResource("4_rgh2o")]
+position = Vector2(988, 484)
+
+[node name="Enemy3" parent="." unique_id=1013820518 instance=ExtResource("4_rgh2o")]
+position = Vector2(1015, 123)
+
+[node name="StaticBody2D" parent="." unique_id=1055108459 instance=ExtResource("6_v1gob")]
+position = Vector2(772, 276)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c02y82m7r87ht"]
+
+[ext_resource type="Texture2D" uid="uid://b278p2kp06md4" path="res://Assets/Obstaculo.png" id="1_uh273"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2sxyv"]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1055108459]
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1349727373]
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("1_uh273")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1707763638]
+position = Vector2(-4.005, 3.49)
+scale = Vector2(16.32, 16.32)
+shape = SubResource("CircleShape2D_2sxyv")

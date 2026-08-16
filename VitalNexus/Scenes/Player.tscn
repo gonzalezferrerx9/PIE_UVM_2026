@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://diol1rjb5nw87"]
+
+[ext_resource type="Script" uid="uid://dp7l4my4ng2kw" path="res://Scenes/PlayerController.cs" id="1_rpqav"]
+[ext_resource type="Texture2D" uid="uid://cah7k63gwpi18" path="res://Assets/Pharmabot Sprites.png" id="2_kyqiw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u0ya7"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1709415378]
+collision_mask = 4
+script = ExtResource("1_rpqav")
+
+[node name="DroneSprite" type="Sprite2D" parent="." unique_id=1019508069]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kyqiw")
+hframes = 2
+vframes = 3
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=2141116581]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1099904012]
+scale = Vector2(2.885, 2.885)
+shape = SubResource("CircleShape2D_u0ya7")

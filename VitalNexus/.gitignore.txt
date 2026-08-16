@@ -1,0 +1,21 @@
+# Godot
+.godot/
+
+# C# / .NET
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# Builds
+Builds/
+builds/
+
+# Archivos temporales
+*.tmp
+*.user
+
+# Windows
+Thumbs.db
+Desktop.iniSS

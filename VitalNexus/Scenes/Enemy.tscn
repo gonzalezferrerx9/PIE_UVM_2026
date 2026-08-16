@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://sbp5bwvf5xko"]
+
+[ext_resource type="Script" uid="uid://ccolrb8mqcb7u" path="res://Scenes/Enemy.cs" id="1_m1htj"]
+[ext_resource type="Texture2D" uid="uid://jx1hk48jlhm7" path="res://Assets/Enemigo2.png" id="2_wovta"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u0ya7"]
+
+[node name="Enemy" type="Area2D" unique_id=618568443]
+collision_layer = 2
+script = ExtResource("1_m1htj")
+
+[node name="EnemySprite" type="Sprite2D" parent="." unique_id=84377105]
+scale = Vector2(0.505, 0.505)
+texture = ExtResource("2_wovta")
+hframes = 2
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=187223915]
+shape = SubResource("CircleShape2D_u0ya7")
