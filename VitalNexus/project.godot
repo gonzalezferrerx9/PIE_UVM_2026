@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Vital Nexus"
-run/main_scene="uid://upur8f25ip5f"
+run/main_scene="uid://cskchj4cuayco"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 

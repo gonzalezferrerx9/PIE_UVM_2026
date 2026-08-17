@@ -3,6 +3,7 @@
 .import/
 
 # C# / .NET
+.mono/
 bin/
 obj/
 
@@ -19,4 +20,4 @@ builds/
 
 # Windows
 Thumbs.db
-Desktop.iniSS
+Desktop.ini

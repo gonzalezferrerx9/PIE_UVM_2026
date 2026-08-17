@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cskchj4cuayco"]
+
+[ext_resource type="Script" uid="uid://qk6oupblm0w5" path="res://Scenes/Cinematic.cs" id="1_8jfr5"]
+[ext_resource type="Texture2D" uid="uid://bn6akegiww1v7" path="res://Cinematics/Intro-1.jpg" id="1_81woh"]
+
+[node name="Cinematic" type="Control" unique_id=523368730]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8jfr5")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=293475194]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_81woh")
+expand_mode = 1
+stretch_mode = 6

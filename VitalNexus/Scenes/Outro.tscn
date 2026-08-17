@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dfhjf3cjsi8bm"]
+
+[ext_resource type="Script" uid="uid://ccu3q3l3xthuj" path="res://Scenes/Outro.cs" id="1_4umaj"]
+[ext_resource type="Texture2D" uid="uid://1qhf2jkmgmso" path="res://Cinematics/Outro-1.jpg" id="2_jlbl0"]
+
+[node name="Outro" type="Control" unique_id=1889725347]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4umaj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1535889357]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_jlbl0")
+expand_mode = 1
+stretch_mode = 6

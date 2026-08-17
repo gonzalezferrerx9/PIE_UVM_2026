@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dc8tbofbmaot1"]
 
 [ext_resource type="Script" uid="uid://chblc2mbh6tjl" path="res://Scenes/Victory.cs" id="1_w158h"]
+[ext_resource type="Texture2D" uid="uid://lhus7olgtiqd" path="res://Cinematics/BKG.png" id="2_13fhg"]
+[ext_resource type="FontFile" uid="uid://0bmf1d7awo11" path="res://Fonts/PressStart2P.ttf" id="3_f6307"]
 
 [node name="Victory" type="Control" unique_id=946076670]
 layout_mode = 3
@@ -10,22 +12,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w158h")
+metadata/_edit_vertical_guides_ = [576.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=96831831]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_13fhg")
+expand_mode = 1
+stretch_mode = 6
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=545764848]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.2491458, 0.13307056, 0.11454419, 1)
+color = Color(0.24065024, 0.592036, 0.999983, 1)
 
 [node name="Title" type="Label" parent="." unique_id=435916297]
 layout_mode = 0
-offset_left = 346.0
-offset_top = 165.0
-offset_right = 854.0
-offset_bottom = 232.0
+offset_left = 168.0
+offset_top = 89.0
+offset_right = 984.00024
+offset_bottom = 156.0
+theme_override_fonts/font = ExtResource("3_f6307")
 theme_override_font_sizes/font_size = 48
 text = "MISION COMPLETADA"
 horizontal_alignment = 1
@@ -33,12 +46,18 @@ vertical_alignment = 1
 
 [node name="Message" type="Label" parent="." unique_id=945036278]
 layout_mode = 0
-offset_left = 223.0
-offset_top = 283.0
-offset_right = 984.0
-offset_bottom = 490.0
+offset_left = 182.0
+offset_top = 258.0
+offset_right = 974.0
+offset_bottom = 568.0
+theme_override_fonts/font = ExtResource("3_f6307")
 theme_override_font_sizes/font_size = 24
-text = "INFECCIÓN CONTROLADA
+text = "INFECCION CONTROLADA
 
-El paciente se encuentra estable."
+EL PACIENTE SE ENCUENTRA ESTABLE
+
+
+
+
+PRESIONE UNA TECLA PARA CONTINUAR"
 horizontal_alignment = 1
